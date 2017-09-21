@@ -1,0 +1,39 @@
+
+<script type="text/template" data-tpl="tpl-main-view">
+
+
+	<div class="main main-tb">
+	  <div class="main-wrap">
+
+<div class="bagcontents">
+
+<# if(self.associated.errcode == 0){ #>
+
+	<!-- 已关联 -->
+	<div class="correlation" style="display: ;">
+		关联企业：<# print(self.associatedAccount.user_name); #><br/>
+		关联管理员：<# print(self.associatedAccount.warde_name); #><br/>
+		关联手机：<# print(self.associatedAccount.mobile); #><br/>
+	</div>
+	<# }else{ #>
+
+	<!-- 未关联 -->
+	<div class="correlations" style="display: ;">
+		暂未关联企业<br/>
+		<p>
+			如需关联，电脑登陆官网<br/> www.feitu360.com<br/> 询问飞兔小二
+		</p>
+	</div>
+
+
+<# } #>
+</div>
+
+
+
+
+	  </div>
+	</div>
+</script>
+
+<div class="page"></div>

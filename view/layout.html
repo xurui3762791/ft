@@ -1,0 +1,25 @@
+<# if(self.showHeader){ #>
+
+	<div class="status-bar-blank"></div>
+	<div class="status-bar status-bar-<# print(self.statusBarStyle); #>">
+	<# if(self.routerPath == "index/index"){ #>
+			<h1 id="<# print(self.domId("pageTitle")); #>"><# print(self.title); #></h1>
+			
+            <a href="#index/detail" class=" meta">明细</a>
+		<# }else{ #>
+
+			<h1 id="<# print(self.domId("pageTitle")); #>"><# print(self.title); #></h1>
+            <a href="#index/index" class="prev"></a>
+		<# } #>
+		
+	</div>
+<# } #>
+<#
+	print(__content__);
+#>
+
+
+			
+
+		
+

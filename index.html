@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--#include file="_header.html"-->
+	<title>飞兔，我们远不止如此</title>
+	<meta content="telephone=no" name="format-detection" />
+	<script type="text/javascript">
+		$(function(){
+			var routerParam = XDK.core.router.getParam("router") ? decodeURIComponent(XDK.core.router.getParam("router")) : null;
+			SPAController.createWebApp({
+				module : "feitu",
+				defaultRoute : ((document.location.hash || routerParam || '').replace(/^#/, ''))
+			});
+		});
+	</script>
+</head>
+
+<body>	
+	<div id="main-container" class="wrap"></div>
+	<!--#include file="_footer.html"-->
+</body>
+</html>

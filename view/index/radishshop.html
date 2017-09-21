@@ -1,0 +1,49 @@
+
+<script type="text/template" data-tpl="tpl-main-view">
+
+
+	<div class="main main-tb">
+	  <div class="main-wrap">
+			<div class="bagcontents">
+				<# 
+					$.each(self.luoboList, function(j, o){
+						
+				#>
+					<div class="bagstore">
+							<div class="bagimg"><img src="<# print(o.goods_img); #>"></div>
+							<div class="bagchange">
+								<div class="l">
+										<p><# print(o.goods_name); #></p>
+										<div><span></span><# print(o.exchange_integral); #>(根)</div>
+								</div>
+								<div class="r">
+									<button class="btn goods" data-id="<# print(o.goods_id); #>">兑换</button>
+								</div>
+							</div>
+					</div>
+
+				
+				<# }); #>
+
+
+			</div>
+	  </div>
+	</div>
+	<div class="pppp">
+		
+	</div>
+</script>
+
+<div class="page"></div>
+
+<!-- 弹出层 -->
+<script type="text/template" data-tpl="newTender">
+	<div class="bagdliongbox" style="display:;">
+		<div class="bagrgba">
+		</div>
+		<div class="bagrgbaok">
+				<p><# print(self.exchange.errmsg); #></p>
+				<button class="btn exchange">确定</button>
+		</div>
+	</div>
+</script>

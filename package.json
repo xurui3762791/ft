@@ -1,0 +1,15 @@
+    {
+
+    "name": "gruntApp",
+    "version": "0.1.0",
+    "author": "feitu",
+    "devDependencies": {
+        "grunt": "*",
+        "load-grunt-tasks" : "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-jshint": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-watch": "*"
+    }
+    }

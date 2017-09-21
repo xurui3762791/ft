@@ -1,0 +1,66 @@
+
+<script type="text/template" data-tpl="tpl-main-view">
+
+
+	<div class="main main-tb">
+	  <div class="main-wrap">
+			<div class="bagcontents">
+<ul class="bagdetail">
+
+
+
+				<# 
+					$.each(self.exchangeInfo, function(j, o){
+						
+				#>
+
+
+		<li>
+			<div class="l">
+				订单奖励
+				<i>2017.08.22</i>
+			</div>
+			<# if(o.direction == 1){ #>
+				<div class="r span">+<# print(o.score); #></div>
+	
+			<# } #>
+			<# if(o.direction == 2){ #>
+				<div class="r">-<# print(o.score); #></div>
+			<# } #>
+			
+		</li>
+
+				<# }); #>
+
+
+
+	
+		
+	</ul>
+
+
+				
+		
+
+
+			</div>
+	  </div>
+	</div>
+	<div class="pppp">
+		
+	</div>
+</script>
+
+<div class="page"></div>
+
+<!-- 弹出层 -->
+<script type="text/template" data-tpl="newTender">
+	<div class="bagdliongbox" style="display:;">
+		<div class="bagrgba">
+		</div>
+		<div class="bagrgbaok">
+				<p><# print(self.exchange.errmsg); #></p>
+				<button class="btn exchange">确定</button>
+		</div>
+	</div>
+</script>
